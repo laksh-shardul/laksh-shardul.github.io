@@ -1,0 +1,148 @@
+/* ---------- COLOR SYSTEM ---------- */
+:root {
+  --bg: #252525;        /* dark mode default */
+  --text: #eaeaea;
+  --muted: #b5b5b5;
+  --accent: #ed2100;    /* scarlett */
+  --divider: rgba(255,255,255,0.15);
+}
+
+body.light {
+  --bg: #FAFAFA;        /* clean light background */
+  --text: #111;
+  --muted: #555;
+  --divider: rgba(0,0,0,0.08);  /* subtle, not visible */
+}
+
+
+/* ---------- BASE ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* ---------- NAV ---------- */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  padding: 80px 24px;
+}
+
+.hero-name {
+  font-family: "Anton", sans-serif;
+  font-size: 3.6rem;
+  color: var(--accent);
+  letter-spacing: 1px;
+  margin-left: -10px; /* subtle left shift */
+}
+
+.identity {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.identity a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;   /* bold, but not shouty */
+}
+
+
+.identity a:hover {
+  color: var(--accent);
+}
+
+.hero-divider {
+  margin: 28px 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--divider),
+    transparent
+  );
+  width: 60%;
+}
+
+
+.tagline {
+  max-width: 720px;
+}
+
+/* ---------- SECTIONS ---------- */
+.section {
+  padding: 60px 24px;
+}
+
+.section h2 {
+  margin-bottom: 16px;
+}
+
+.skills-list {
+  list-style: square;
+  padding-left: 20px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero-name {
+    font-size: 2.4rem;
+  }
+}
+
+#experience h3 {
+  margin-top: 14px;   /* subtle spacing between roles */
+}
