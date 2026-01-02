@@ -1,6 +1,6 @@
 /* ---------- COLOR SYSTEM ---------- */
 :root {
-  --bg: #252525;        /* dark mode default */
+  --bg: #000000;        /* dark mode default */
   --text: #eaeaea;
   --muted: #b5b5b5;
   --accent: #ed2100;    /* scarlett */
@@ -146,3 +146,4 @@ body {
 #experience h3 {
   margin-top: 14px;   /* subtle spacing between roles */
 }
+
